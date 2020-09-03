@@ -8,7 +8,8 @@ webview.create_window(title, url='', html='', js_api=None, width=800, height=600
                       x=None, y=None, resizable=True, fullscreen=False, \
                       min_size=(200, 100), hidden=False, frameless=False, \
                       minimized=False, on_top=False, confirm_close=False, \
-                      background_color='#FFF', text_select=False)
+                      background_color='#FFF', text_select=False, \
+                      preserve_controls=False)
 ```
 
 Create a new _pywebview_ window and returns its instance. Window is not shown until the GUI loop is started. If the function is invoked during the GUI loop, the window is displayed immediately.
@@ -33,6 +34,7 @@ Create a new _pywebview_ window and returns its instance. Window is not shown un
 * `background_color` - Background color of the window displayed before WebView is loaded. Specified as a hex color. Default is white.
 * `transparent` - Create a transparent window. Not supported on Windows. Default is False. Note that this setting does not hide or make window chrome transparent. To hide window chrome set `frameless` to True.
 * `text_select` - Enables document text selection. Default is False. To control text selection on per element basis, use [user-select](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select) CSS property.
+* `preserve_controls` - Whether to keep the standard window controls (maximize, minimize, close) on frameless windows (MacOS only)
 
 ## webview.start
 
